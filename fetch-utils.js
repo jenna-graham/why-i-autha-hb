@@ -13,7 +13,7 @@ export async function signupUser(email, password) {
     if (response.user) {
         return response.user;
     } else {
-        location.replace('/other-page');
+        location.replace('./other-page');
     }
     
 }
@@ -23,7 +23,7 @@ export async function signInUser(email, password){
     if (response.user){
         return response.user;
     } else {
-        location.replace('/other-page');
+        location.replace('./other-page');
     }
 
     
@@ -36,6 +36,10 @@ export async function checkAuth() {
 }
 
 
-// export async function redirectIfLoggedIn() {}
+export async function redirectIfLoggedIn() {
+    if (getUser()) {
+        location.replace('./other-page');
+    }
+}
 
 // export async function logout() {}
