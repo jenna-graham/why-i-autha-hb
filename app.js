@@ -5,6 +5,7 @@ const signInForm = document.getElementById('sign-in');
 import { signupUser } from './fetch-utils.js';
 import { signInUser } from './fetch-utils.js';
 
+
 const signUpForm = document.getElementById('sign-up');
 // const signUpEmail = document.getElementById('sign-up-email');
 // const signUpPassword = document.getElementById('sign-up-password');

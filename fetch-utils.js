@@ -13,7 +13,7 @@ export async function signupUser(email, password) {
     if (response.user) {
         return response.user;
     } else {
-        console.error(response.error);
+        location.replace('/other-page');
     }
     
 }
@@ -23,13 +23,18 @@ export async function signInUser(email, password){
     if (response.user){
         return response.user;
     } else {
-        console.error(response.error);
+        location.replace('/other-page');
     }
 
     
 }
 
-// export async function checkAuth() {}
+export async function checkAuth() {
+    const user = getUser();
+    
+    if (!user) location.replace('/'); 
+}
+
 
 // export async function redirectIfLoggedIn() {}
 
